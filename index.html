@@ -10,8 +10,10 @@
 </head>
 <body>
 <header>
+    <!-- this will always be up top -->
     <h1>How Well Do You Know Classical Music?</h1>
-    <section role = "banner" class="banner flex-banner">
+    <!--this is hidden at first, shown with questions, hiden after checking the answer, then shown for the next wustion-->
+    <section role = "banner" class="banner">
         <div class="counter">Question: <span class="counter-num">0</span> of <span class="num-questions"></span></div>
         <div class = "score">Score: <span class="score-correct">0</span> correct; <span class="score-wrong">0</span> incorrect</div>
     </section>
@@ -19,29 +21,36 @@
 
 
 <main>
+    <!--a light opaque box with a question and 4 answers-->
     <section role = "textbox" class="question-card">
+        <!--sometimes an image displayed with the question it will be hidden other times-->
         <div class="qanda">
             <h2 class="question">Can You "Handel" It?</h2>
             <img class="handel" src="images/GFHandel.jpg">
-            </div>
-            <div class="answers">
         </div>
+        <!--answers populated with for loop that searches through each object's array of answers-->
+        <div class="answers">
+        </div>
+        <!--these will show and hide at varios points hurray for jquery-->
         <div class="big-btns">
             <button class="start test-btns">Start!</button>
             <button class="submit test-btns">Submit</button>
             <button class="restart test-btns">Take it again!</button>
         </div>
     </section>
+    <!--this changes according to the answers-->
     <section class="response">
         <div class="correct"></div>
         <div class="wrong"></div>
         <button class="next test-btns">Next</button>
         <button class="restart test-btns">Restart</button>
     </section>
+    <!--depending on how well/bad the quiz is done this will be populated with a adequate response-->
     <section class="summary">
     </section>
 </main>
 </body>
+<!--I find it best to link js down here-->
 <script src="JS/STORE.js"></script>    
 <script src="JS/script.js"></script>
 

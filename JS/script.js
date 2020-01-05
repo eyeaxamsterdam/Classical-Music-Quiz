@@ -1,12 +1,12 @@
 'use strict';
 
+/* initialize scores and question number */
 let questionNum = 0;
 let score = 0;
 let incorrect = 0
 
 
-
-
+/* event listener will run this on restart, next, and start buttons.*/
 function showQuestion() {
     $('.counter-num').text(questionNum+1);
     $('.num-questions').text(STORE.length);
@@ -15,6 +15,7 @@ function showQuestion() {
     `<h3 class="question">${STORE[questionNum].question}</h3>
     <div class="flexans">`
 
+    /* populate answers by index */
     for(let i=0; i < STORE[questionNum].answers.length; i++) {
         html += `<button class="answer-btn btn" id="${i}">${STORE[questionNum].answers[i]}</button>`
     }
@@ -25,9 +26,11 @@ function showQuestion() {
     $('.submit').show();
 }
 
-
+/* event listener will run this as well on submit button. if correct one thing will run if
+not a nother thing will run. score and not-needed buttons will be hidden with adding classes or using .hide() */
 function checkAnswer(answer) {
     $('.btn').addClass('disabled').prop('disabled', true);;
+    //don't want butons to be clickable when answer is checked
     if (answer === STORE[questionNum].correctAnswer) {
         $('.correct, .next').show(); 
         $('h1').addClass('correct-heading');
@@ -48,6 +51,9 @@ function checkAnswer(answer) {
     $('.score-wrong').text(incorrect);   
 }
 
+
+/* when STORE.length is met, the next button will run a different function that give the final feedback and
+give a chance to take the quiz again */
 function finishQuiz() {
     $('.next, .correct, .wrong, .next, .banner').hide();
     let finalScore=`You got ${score} out of ${STORE.length} correct. `
@@ -73,6 +79,17 @@ function finishQuiz() {
     $('.restart').show();   
 }
 
+
+/* this starts the whole quiz */
+$('.start').on('click', function(event) {
+    event.preventDefault();
+    $('.banner').show();
+    $('.start, .handel').hide();
+    showQuestion();
+});
+
+
+/* brings up the next question */
 $('.next').click(function() {
     $('section').removeClass('question-card-wrong question-card-correct disabled');
     $('.banner').show();
@@ -89,6 +106,7 @@ $('.next').click(function() {
 });
 
 
+/* runs the checkAnswer() function */
 $('.submit').on('click', function(event) {
     const answer = parseInt($('.selected').attr('id'));
     if ($('.selected').length) {
@@ -101,21 +119,13 @@ $('.submit').on('click', function(event) {
     }
 });
 
-
+/* when you click stuff it will take away the other selections */
 $('.question-card').on('click','.btn', e=>{
     $('.selected').removeClass('selected');
     $(e.target).addClass('selected');
 });
 
-
-$('.start').on('click', function(event) {
-    event.preventDefault();
-    $('.banner').show();
-    $('.start, .handel').hide();
-    showQuestion();
-});
-
-
+/* basically the same as the start event listener */
 $('.restart').on('click', function(event) {
     console.log('click')
     questionNum = 0;
@@ -131,11 +141,3 @@ $('.restart').on('click', function(event) {
     $('h1').text('How Well Do You Know Classical Music?');
     showQuestion();
 });
-
-
-
-/* runQuizApp() {
-
-
-
-} */

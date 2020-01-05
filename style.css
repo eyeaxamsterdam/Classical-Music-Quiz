@@ -8,6 +8,10 @@
     margin-left: auto;
 }
 
+.banner, .restart, .submit, .next, .wrong, .correct {
+    display: none;
+}
+
 
 html {
     margin: 0;
@@ -35,10 +39,19 @@ h1 {
     color: white;
 }
 
+.correct-heading {
+    color: rgba(0, 160, 0);
+}
+
 .wrong-heading {
     color: rgb(90, 0, 0);
-    background-color: inherit;
 }
+
+.score-correct {
+    color: rgb(10, 90, 158);
+    font-size: larger;
+}
+
 
 .wrong {
     font-size: 30px;
@@ -53,18 +66,7 @@ h1 {
     background-color: rgba(0, 160, 0, 0.4);
     margin: 0 20px;
     padding: 5px 10px;
-    display: flex;
-    flex-direction: row;
     border-radius: 10px;
-}
-
-.correct-heading {
-    color: rgba(0, 160, 0);
-}
-
-.banner {
-    margin: 30px 10px;
-    font-size: 30px;
 }
 
 .question-card {
@@ -91,10 +93,10 @@ h1 {
     padding: 20px 0;
     font-size: 30px;
 }
+
 .handel {
     width: 60%;
 }
-
 
 .test-btns {
     font-size: 40px;
@@ -118,9 +120,12 @@ h1 {
 
 }
 
-.banner, .restart, .submit, .next, .correct, .wrong {
-    display: none;
+.banner {
+    font-size: 30px;
+    padding-top: 15px;
 }
+
+
 
 .start {
     margin: 20px 0;
@@ -146,16 +151,6 @@ h1 {
 }
 
 
-.submit {
-    margin: 20px;
-    border-radius: 10px 10px;
-}
-
-.imgBank {
-    width: 50%;
-    max-width: 350px;
-}
-
 .btn.selected {
     background-color: steelblue;
     border: 2px solid white;
@@ -180,6 +175,21 @@ h1 {
     outline: none;
 } 
 
+
+.submit {
+    margin: 20px;
+    border-radius: 10px 10px;
+}
+
+.response p {
+    padding: 5px;
+}
+
+.imgBank {
+    width: 50%;
+    max-width: 350px;
+}
+
 .restart {
     width: 50%;
     height: 20%;
@@ -193,7 +203,7 @@ h1 {
 @media only screen and (min-width: 720px) {
     body {
         max-width: 758px;
-    }
+    } 
     .flexans {
       display: flex;
       flex-direction: row;

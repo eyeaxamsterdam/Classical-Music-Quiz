@@ -8,8 +8,8 @@ const STORE = [
         'France'
       ],
       correctAnswer:1,
-      correctResponse: `<p><img class="imgBank" src="images/GFHandel.jpg"></p> That's correct! Handel was born in Germany, spent time in Italy, but eventually moved to England, gained citizenship and was subsequently hired as composer for The Chapel Royal!`,
-      incorrectResponse: 'That\'ts not correct. Handel was born in Germany, spent time in Italy, but eventually moved to England.',
+      correctResponse: `<p><img class="imgBank" src="images/GFHandel.jpg"></p><p>That's correct! Handel was born in Germany, spent time in Italy, but eventually moved to England, gained citizenship and was subsequently hired as composer for The Chapel Royal!<p>`,
+      incorrectResponse: '<p><img class="imgBank" src="images/GFHandel.jpg"></p><p>That\'ts not correct. Handel was born in Germany, spent time in Italy, but eventually moved to England.</p>',
     },
     {
       question:
@@ -22,7 +22,7 @@ const STORE = [
       ],
       correctAnswer:0,
       correctResponse: 'Yes, Arnold Schoenberg was concidered "The Father of Atonality." Along with Alban Berg and Aton Webern he is concidered a member of the "Second Viennese School"',
-      incorrectResponse: 'John Williams is a modern film composer. Lou Bega is a meme, and David Hasselhoff is a lifeguard...I can\'t beleve you got this one wrong'
+      incorrectResponse: 'John Williams composed film music like Star Wars. Lou Bega is a meme, and David Hasselhoff is a lifeguard...I can\'t beleve you got this one wrong'
     },
     {
       question:
@@ -34,8 +34,8 @@ const STORE = [
         '1750'
       ],
       correctAnswer:3,
-      correctResponse: 'Yes, he died in 1750 in Leipzig.',
-      incorrectResponse: 'No, he died in 1750 in Leipzig',
+      correctResponse: `<p>Yes, he died in 1750 in Leipzig.</p><p><img class="imgBank" src="images/jsbach.jpg"></p> `,
+      incorrectResponse: '<p>No, he died in 1750 in Leipzig</p><p><img class="imgBank" src="images/jsbach.jpg"></p> ',
     },
     {
       question: 'In 1889 the "Paris Exposition Universelle" World Fair brought music from all over the world. One particular style of music influenced young composers like Claude Debussy. What style of music was it?' ,
@@ -96,7 +96,7 @@ const STORE = [
         'Niccolò Paganini'
       ],
       correctAnswer: 3,
-      correctResponse: 'Yes, Paganini was a pretty insane violinist as evidence by written accounts and the 24 Caprices he composed, which are incredibly virtuosic and require tremendous quickness, percision, and endurance. I tried selling my soul to the devil and I still can\'t play it.',
+      correctResponse: 'Yes, Paganini was a pretty insane violinist as evidence by first-hand written accounts and the 24 Caprices he composed, which are incredibly virtuosic and require tremendous quickness, percision, and endurance. I tried selling my soul to the devil and I still can\'t play it.',
       incorrectResponse: 'All these are fantastic violinists, but Paganini is said to have sold his soul to the devil to gain his level of virtuosity. I don\'t think that\'s true, because I\'d remember somebody with a silly name like Paganini making a deal with me.'
     },
     {
@@ -105,7 +105,7 @@ const STORE = [
         'Ice',
         'Lamb intestine',
         'Horse hair',
-        'Copper'
+        'cats'
       ],
       correctAnswer: 1,
       correctResponse: 'That\'s correct! Though it\'s called "catgut," it has nothing to do with cats and is made from the fibers of lamb or sheep intestine. Strings these days are made of metals, but there has been a resurgance of these catgut strings in recent decades in an attempt to recreate pre-19th century music in a more historically acurate way.',

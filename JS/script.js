@@ -1,6 +1,6 @@
 'use strict';
 
-let questionNum = 4;
+let questionNum = 0;
 let score = 0;
 let incorrect = 0
 
@@ -49,23 +49,24 @@ function checkAnswer(answer) {
 }
 
 function finishQuiz() {
-    $('.next,.correct, .wrong, .next').hide();
+    $('.next, .correct, .wrong, .next, .banner').hide();
+    let finalScore=`You got ${score} out of ${STORE.length} correct. `
     if (score <= 3) {
-        $('.summary').html(`<h2>Oof, not very good. "restart" to have another go!</h2>`)
-        $('h1').html(`oof, not so good`)
+        $('h1').html(finalScore + 'Yikes, that was not good!');
+        $('.summary').html(`<h2>It's okay, you can try again! Click "restart"</h2>`);
     }
     else if (score <= 6) {
-        $('.summary').html(`<h2>That's it! Click "restart" to have another go!</h2>`)
-        $('h1').html(`not great!`)
+        $('h1').html(finalScore);
+        $('.summary').html(`<h2>Not great! Try again though.</h2>`);
     }
     else if (score >= 7 && score != 10) {
-        $('.summary').html(`<h2>That's it! Click "restart" to have another go!</h2>`)
-        $('h1').html(`You did good!`)
+        $('h1').html(finalScore + 'Hey, you\'re doing alright!');
+        $('.summary').html(`<h2>Try and get a perfect score, now. Go again!</h2>`);
     
     }
     else {
-        $('.summary').html(`<h2>That's it! Click "restart" to have another go!</h2>`)
-        $('h1').html(`You got em all!`)
+        $('h1').html(`Is your name Ash Ketchem? Because you just got them all!`);
+        $('.summary').html(`<h2>I guess you can go and score another perfect run if you want..</h2>`);
     }
     $('.summary').show();
     $('.question-card').hide();

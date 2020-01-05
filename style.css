@@ -229,4 +229,7 @@ h1 {
     .next {
         margin-top: 30px;
     }
+    .wrong, .correct {
+        font-size: 28px;
+    }
   }

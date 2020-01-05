@@ -35,6 +35,7 @@ function checkAnswer(answer) {
         $('.correct, .next').show(); 
         $('h1').addClass('correct-heading');
         $('section').eq(1).addClass('question-card-correct');
+        $('section').eq(1).removeClass('question-card');
         $('.correct').html(`${STORE[questionNum].correctResponse}`);
         score++;
     }
@@ -43,12 +44,13 @@ function checkAnswer(answer) {
         $('.wrong, .next').show(); 
         $('h1').addClass('wrong-heading');
         $('section').eq(1).addClass('question-card-wrong');
+        $('section').eq(1).removeClass('question-card');
         $('.wrong').html(`${STORE[questionNum].incorrectResponse}`);
         incorrect++
     }
     $('.submit').hide();
     $('.score-correct').text(score);
-    $('.score-wrong').text(incorrect);   
+    $('.score-wrong').text(incorrect);  
 }
 
 
@@ -91,6 +93,7 @@ $('.start').on('click', function(event) {
 
 /* brings up the next question */
 $('.next').click(function() {
+    $('section').eq(1).addClass('question-card'); 
     $('section').removeClass('question-card-wrong question-card-correct disabled');
     $('.banner').show();
     $('.answer-card, h1').removeClass('wrong correct-heading wrong-heading');

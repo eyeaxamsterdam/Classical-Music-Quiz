@@ -62,16 +62,16 @@ h1 {
 
 
 .wrong {
+    color: rgb(80, 78, 75)
     font-size: 20px;
-    background-color: rgba(120, 0, 0, 0.4);
     margin: 0 20px;
     padding: 5px 10px;
     border-radius: 10px;
 }
 
 .correct {
+    color: rgb(80, 78, 75)
     font-size: 20px;
-    background-color: rgba(0, 160, 0, 0.4);
     margin: 0 20px;
     padding: 5px 10px;
     border-radius: 10px;
@@ -82,10 +82,6 @@ h1 {
     background-color:rgba(0, 160, 0, 0.2);
     margin: 20px 20px;
     color: white;
-    margin: 20px;
-    color: white;
-    padding: 20px;
-    border-radius: 10px
 }
 
 .question-card-wrong{
@@ -93,7 +89,6 @@ h1 {
     margin: 20px 20px;
     color: white;
     margin: 20px;
-    color: white;
     padding: 20px;
     border-radius: 10px
 }

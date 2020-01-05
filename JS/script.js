@@ -1,6 +1,6 @@
 'use strict';
 
-let questionNum = 0;
+let questionNum = 4;
 let score = 0;
 let incorrect = 0
 
@@ -27,15 +27,20 @@ function showQuestion() {
 
 
 function checkAnswer(answer) {
-    $('.btn').prop('disabled', 'true');
+    $('.btn').addClass('disabled').prop('disabled', true);;
     if (answer === STORE[questionNum].correctAnswer) {
         $('.correct, .next').show(); 
         $('h1').addClass('correct-heading');
+        $('section').eq(1).addClass('question-card-correct');
+        $('.correct').html(`${STORE[questionNum].correctResponse}`);
         score++;
     }
     else {
+        $('.selected')
         $('.wrong, .next').show(); 
         $('h1').addClass('wrong-heading');
+        $('section').eq(1).addClass('question-card-wrong');
+        $('.wrong').html(`${STORE[questionNum].incorrectResponse}`);
         incorrect++
     }
     $('.submit').hide();
@@ -68,6 +73,7 @@ function finishQuiz() {
 }
 
 $('.next').click(function() {
+    $('section').removeClass('question-card-wrong question-card-correct disabled');
     $('.banner').show();
     $('.answer-card, h1').removeClass('wrong correct-heading wrong-heading');
     if (questionNum < STORE.length-1) {
@@ -125,3 +131,10 @@ $('.restart').on('click', function(event) {
     showQuestion();
 });
 
+
+
+/* runQuizApp() {
+
+
+
+} */

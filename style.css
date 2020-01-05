@@ -4,23 +4,27 @@
     padding: 0;
     text-align: center;
     box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
 html {
-    height: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
-    background: linear-gradient(rgba(10, 10, 10, 80),
-    rgba(10, 10, 10, .6)), 
-    url(images/Prague_Symphony_by_Mozart.jpg) repeat center;
+    background: 
+        linear-gradient(rgba(10, 10, 10, 1),
+        rgba(10, 10, 10, .8)), 
+        url(images/Prague_Symphony_by_Mozart.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     color: white;
+    background-attachment: fixed;
 }
 
 body {
-    height: 100%;
     padding: 30px 0px;
 }
 
@@ -32,8 +36,26 @@ h1 {
 }
 
 .wrong-heading {
-    color: rgb(160, 0, 0);
+    color: rgb(90, 0, 0);
     background-color: inherit;
+}
+
+.wrong {
+    font-size: 30px;
+    background-color: rgba(120, 0, 0, 0.4);
+    margin: 0 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.correct {
+    font-size: 30px;
+    background-color: rgba(0, 160, 0, 0.4);
+    margin: 0 20px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
 }
 
 .correct-heading {
@@ -50,53 +72,53 @@ h1 {
     margin: 20px;
     color: white;
     padding: 20px;
+    border-radius: 10px
 }
 
 .question-card-correct{
-    background-color:rgba(0, 160, 0, 0.5);
+    background-color:rgba(0, 160, 0, 0.2);
     margin: 20px 20px;
     color: white;
 }
 
 .question-card-wrong{
-    background-color:rgb(160, 0, 0);
+    background-color:rgba(160, 0, 0, 0.3);
     margin: 20px 20px;
     color: white;
 }
 
 .question {
-    /* padding: 20px; */
+    padding: 20px 0;
     font-size: 30px;
 }
 .handel {
-    width: 66.66666%;
+    width: 60%;
 }
 
-
-.feedback .correct {
-    font-size: 7vw;
-    margin: 30px 0;
-    background: rgba(0, 160, 0, 0.5);
-    color: white;
-}
-
-.feedback .wrong {
-    font-size: 7vw;
-    margin: 30px 0;
-    background: rgba(160, 0, 0, 0.5);
-    color: white;
-}
 
 .test-btns {
     font-size: 40px;
     padding: 10px 50px;
     background-color: steelblue;
     color: white;
+    margin: 20px;
+    border-radius: 7px;
 }
 
+.test-btns:hover {
+    background-color: rgb(58, 153, 58);
+    color: black;
 
+}
 
-.banner, .restart, .submit, .wrong, .correct, .next {
+.test-btns:focus {
+    background-color: rgb(58, 153, 58);
+    color: black;
+    outline: none;
+
+}
+
+.banner, .restart, .submit, .next, .correct, .wrong {
     display: none;
 }
 
@@ -110,14 +132,15 @@ h1 {
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 30px 0;
-    /* flex-direction: column; */
+}
+
+.btn {
+    border-radius: 30px 30px;
 }
 
 .answer-btn {
-    width: 40%;
-    font-size: initial;
+    width: 90%;
     padding: 10px 0;
-    margin: 10px 0;
     font-size: 30px;
     margin: 10px auto;
 }
@@ -125,26 +148,41 @@ h1 {
 
 .submit {
     margin: 20px;
+    border-radius: 10px 10px;
+}
+
+.imgBank {
+    width: 50%;
+    max-width: 350px;
 }
 
 .btn.selected {
-    background-color: rgb(7, 7, 37);
+    background-color: steelblue;
     border: 2px solid white;
     color: white;
+    pointer-events: none;
+    
 }
 
-.btn.next {
-    font-size: 10vw;
-    width: 33.3333vw;
+.btn.disabled {
+    pointer-events: none;
 }
 
+ 
 .btn:hover {
-    background: rgb(236, 240, 47);
-}
+    background: rgba(0, 0, 0, 0.644);
+    color: white;
+} 
+
+.btn:focus {
+    background: rgba(0, 0, 0, 0.644);
+    color: white;
+    outline: none;
+} 
 
 .restart {
-    width: 50vw;
-    height: 20vh;
+    width: 50%;
+    height: 20%;
 }
 
 .summary {
@@ -152,34 +190,17 @@ h1 {
 }
 
 
-
-@media only screen and (min-width: 1110px) {
-    h1 {
-      font-size: 4em;
-    }
+@media only screen and (min-width: 720px) {
     body {
-        width: 66%;
-        margin-left: auto;
-        margin-right: auto;        
+        max-width: 758px;
     }
-    .banner {
-        font-size: 2vw;
+    .flexans {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
-    .handel {
-        width: 50%;
+    
+    .answer-btn {
+        width: 40%;
     }
   }
-
-
-
-
-@media only screen and (min-width: 1376px) {
-    body {
-        width: 50%;
-    }
-    .question-card {
-        width: 66%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}

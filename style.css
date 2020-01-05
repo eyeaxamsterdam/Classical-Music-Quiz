@@ -6,6 +6,7 @@
     box-sizing: border-box;
     margin-right: auto;
     margin-left: auto;
+    text-align: center;
 }
 
 .banner, .restart, .submit, .next, .wrong, .correct {
@@ -190,10 +191,6 @@ h1 {
     max-width: 350px;
 }
 
-.restart {
-    width: 50%;
-    height: 20%;
-}
 
 .summary {
     display: none;

@@ -1,6 +1,6 @@
 'use strict';
 
-let questionNum = 9;
+let questionNum = 0;
 let score = 0;
 let incorrect = 0
 

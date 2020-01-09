@@ -11,18 +11,17 @@ function showQuestion() {
     $('.counter-num').text(questionNum+1);
     $('.num-questions').text(STORE.length);
 
-    let html = 
-    `<h3 class="question">${STORE[questionNum].question}</h3>
-    <div class="flexans">`
+    let htmlQuestion = 
+    `<h3 class="question">${STORE[questionNum].question}</h3>`
 
     /* populate answers by index */
+    let htmlAnswers = ``
     for(let i=0; i < STORE[questionNum].answers.length; i++) {
-        html += `<button class="answer-btn btn" id="${i}">${STORE[questionNum].answers[i]}</button>`
+        htmlAnswers += `<input type="button" class="answer-btn btn" id="${i}" value="${STORE[questionNum].answers[i]}">`
     }
+    $('.question').html(htmlQuestion);
+    $('.answers').html(htmlAnswers);
 
-    html += `</div>`
-
-    $('.qanda').html(html);
     $('.submit').show();
 }
 
@@ -85,7 +84,7 @@ function finishQuiz() {
 /* this starts the whole quiz */
 $('.start').on('click', function(event) {
     event.preventDefault();
-    $('.banner').show();
+    $('.banner, .answers').show();
     $('.start, .handel').hide();
     showQuestion();
 });
@@ -111,6 +110,7 @@ $('.next').click(function() {
 
 /* runs the checkAnswer() function */
 $('.submit').on('click', function(event) {
+    event.preventDefault();
     const answer = parseInt($('.selected').attr('id'));
     if ($('.selected').length) {
         checkAnswer(answer);
@@ -124,6 +124,7 @@ $('.submit').on('click', function(event) {
 
 /* when you click stuff it will take away the other selections */
 $('.question-card').on('click','.btn', e=>{
+    e.preventDefault();
     $('.selected').removeClass('selected');
     $(e.target).addClass('selected');
 });

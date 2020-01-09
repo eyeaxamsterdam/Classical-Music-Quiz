@@ -11,7 +11,7 @@
 }
 
 /* these will show at various times, but not at the beginning */
-.banner, .restart, .submit, .next, .wrong, .correct {
+.banner, .restart, .submit, .next, .wrong, .correct, summary, .hide {
     display: none;
 }
 
@@ -70,8 +70,8 @@ h1 {
 }
 
 .correct {
-    color: rgb(80, 78, 75)
-    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
     margin: 0 20px;
     padding: 5px 10px;
     border-radius: 10px;
@@ -154,14 +154,10 @@ h1 {
 } 
 
 .btn:focus {
-    background: rgba(0, 0, 0, 0.644);
+    background: steelblue;
     color: white;
     outline: none;
 } 
-
-
-
-
 
 .banner {
     font-size: 30px;
@@ -197,6 +193,7 @@ h1 {
 
 .response p {
     padding: 5px;
+
 }
 
 .imgBank {
@@ -204,9 +201,6 @@ h1 {
     max-width: 350px;
 }
 
-.summary {
-    display: none;
-}
 
 
 @media only screen and (min-width: 720px) {
@@ -221,7 +215,7 @@ h1 {
     }
     
     .answer-btn {
-        width: 40%;
+        width: 43%;
     }
     .imgBank {
         width:50%;

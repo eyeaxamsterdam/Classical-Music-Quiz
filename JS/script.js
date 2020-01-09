@@ -20,16 +20,17 @@ function showQuestion() {
         htmlAnswers += `<input type="button" class="answer-btn btn" id="${i}" value="${STORE[questionNum].answers[i]}">`
     }
     $('.question').html(htmlQuestion);
-    $('.answers').html(htmlAnswers);
+    $('.flexans').html(htmlAnswers);
 
     $('.submit').show();
 }
 
-/* event listener will run this as well on submit button. if correct one thing will run if
-not a nother thing will run. score and not-needed buttons will be hidden with adding classes or using .hide() */
+/* event listener will run this as well on submit button. if correct one thing will run, if
+not another will run. score and not-needed buttons will be hidden with adding classes or using .hide() */
 function checkAnswer(answer) {
-    $('.btn').addClass('disabled').prop('disabled', true);;
-    //don't want butons to be clickable when answer is checked
+    $('.submit').hide();
+    $('.btn').addClass('disabled').prop('disabled', true);
+    //don't want butons to be clickable after answer is checked
     if (answer === STORE[questionNum].correctAnswer) {
         $('.correct, .next').show(); 
         $('h1').addClass('correct-heading');
@@ -47,7 +48,6 @@ function checkAnswer(answer) {
         $('.wrong').html(`${STORE[questionNum].incorrectResponse}`);
         incorrect++
     }
-    $('.submit').hide();
     $('.score-correct').text(score);
     $('.score-wrong').text(incorrect);  
 }
@@ -57,10 +57,10 @@ function checkAnswer(answer) {
 give a chance to take the quiz again */
 function finishQuiz() {
     $('.next, .correct, .wrong, .next, .banner').hide();
-    let finalScore=`You got ${score} out of ${STORE.length} correct. `
+    let finalScore=`You got ${score} out of ${STORE.length} correct! `
     if (score <= 3) {
         $('h1').html(finalScore + 'Yikes, that was not good!');
-        $('.summary').html(`<h2>It's okay, you can try again! Click "restart"</h2>`);
+        $('.summary').html(`<h2>It's okay, you can try again! Click "restart."</h2>`);
     }
     else if (score <= 6) {
         $('h1').html(finalScore);
@@ -122,7 +122,7 @@ $('.submit').on('click', function(event) {
     }
 });
 
-/* when you click stuff it will take away the other selections */
+/* when you click buttons it will deselect the other selections */
 $('.question-card').on('click','.btn', e=>{
     e.preventDefault();
     $('.selected').removeClass('selected');

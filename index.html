@@ -12,29 +12,28 @@
 <header>
     <h1>How Well Do You Know Classical Music?</h1>
     <section role = "banner" class="banner">
-        <p class="counter">Question: <span class="counter-num">0</span> of <span class="num-questions"></span></></p>
+        <p class="counter">Question: <span class="counter-num">0</span> of <span class="num-questions"></span></p>
         <p class = "score">Score: <span class="score-correct">0</span> correct; <span class="score-wrong">0</span> incorrect</p>
     </section>
 </header>
 
 <main>
     <section role = "textbox" class="question-card">
-        <h2 class="question">Can You "Handel" It?</h2>
-        <img class="handel" src="images/GFHandel.jpg">
-        <form class="forms">
-            <div class="answers flexans">
-                <div class="hide">
-                    <input type="button" class="btn test-btns" value="answer 1">
-                    <input type="button" class="btn test-btns" value="answer 2">
-                    <input type="button" class="btn test-btns" value="answer 3">
-                    <input type="button" class="btn test-btns" value="answer 4">
+        <form class="forms" action="some-server-endpoint" method ="post">
+            <h2 class="question">Can You "Handel" It?</h2>
+            <img class="handel" src="images/GFHandel.jpg" alt="George F Handel in a powdered wig">
+                <div class="flexans">
+                    <div class="hide">
+                        <input type="button" class="btn test-btns" value="answer 1">
+                        <input type="button" class="btn test-btns" value="answer 2">
+                        <input type="button" class="btn test-btns" value="answer 3">
+                        <input type="button" class="btn test-btns" value="answer 4">
+                    </div>
                 </div>
-            </div>
-            <input type="button" class="start test-btns" value="Start!">
-            <input type="submit" class="submit test-btns" value="Submit">
-            <input type="button" class="restart test-btns" value="Take it">
+                <input type="button" class="start test-btns" value="Start!">
+                <input type="submit" class="submit test-btns" value="Submit">
+                <input type="button" class="restart test-btns" value="Take it">
         </form>
-        
     </section>
 
     <section class="response">

@@ -21,7 +21,7 @@ const STORE = [
         'Lou Bega'
       ],
       correctAnswer:0,
-      correctResponse: 'Yes, Arnold Schoenberg was concidered "The Father of Atonality." Along with Alban Berg and Aton Webern he is concidered a member of the "Second Viennese School"',
+      correctResponse: 'Yes, Arnold Schoenberg was concidered "The Father of Atonality." Along with Alban Berg and Aton Webern he is concidered a member of the "Second Viennese School."',
       incorrectResponse: 'John Williams composed film music like Star Wars. Lou Bega is a meme, and David Hasselhoff is a lifeguard...I can\'t beleve you got this one wrong'
     },
     {
@@ -34,8 +34,8 @@ const STORE = [
         '1750'
       ],
       correctAnswer:3,
-      correctResponse: `<p>Yes, he died in 1750 in Leipzig.</p><p><img class="imgBank" src="images/jsbach.jpg" alt="JS Bach at an Organ"></p> `,
-      incorrectResponse: '<p>No, he died in 1750 in Leipzig</p><p><img class="imgBank" src="images/jsbach.jpg" alt="JS Bach at an Organ"></p> ',
+      correctResponse: `<p>Yes, he died in 1750 in Leipzig. Only 6 years before the birth of Mozart!</p><p><img class="imgBank" src="images/jsbach.jpg" alt="JS Bach sitting down"></p> `,
+      incorrectResponse: '<p>No, he died in 1750 in Leipzig. Only 6 years before the birth of Mozart!</p><p><img class="imgBank" src="images/jsbach.jpg" alt="JS Bach sitting down"></p> ',
     },
     {
       question: 'In 1889 the "Paris Exposition Universelle" World Fair brought music from all over the world. One particular style of music influenced young composers like Claude Debussy. What style of music was it?' ,
@@ -47,7 +47,7 @@ const STORE = [
       ],
       correctAnswer: 0,
       correctResponse: 'Yes! It\'s said that the 1889 world fair was the first public venue that used electricity. People from all over the world were brought over to share their culture. Balinese Gamalan stunned a young Debussy and you can hear references to gamalan colotamy',
-      incorrectResponse: 'No. Interestingly, it\'s said that the 1889 world fair was the first public venue that used electricity. People from all over the world were brought over to share their culture. But it was Balinese Gamalan that stunned a young Debussy and you can hear references to gamalan colotamy'
+      incorrectResponse: 'No. Interestingly, it\'s said that the 1889 world fair was the first public venue that used electricity. People from all over the world were brought over to share their culture. But it was Balinese Gamalan that stunned a young Debussy and you can hear references to gamalan colotamy (metric patterns) in some of his music.'
     },
     {
       question:
@@ -59,8 +59,8 @@ const STORE = [
         'Aaron Copland'
       ],
       correctAnswer: 2,
-      correctResponse: `<p><img class=imgBank src="images/johnCage.jpg" alt="John Cage at a prepaired piano"></p><p>Correct! John Cage called for balls, books, metal, and all manner of every-day items be put into the piano to turn it into a completely different sounding instrument.</p>`,
-      incorrectResponse: 'Sorry, that is not correct! John Cage called for balls, books, metal, and all manner of every-day items be put into the piano to turn it into a completely different sounding instrument.'
+      correctResponse: `<p><img class=imgBank src="images/johnCage.jpg" alt="John Cage at a prepaired piano"></p><p>Correct! John Cage called for bearings, books, metal, and all manner of every-day items be put into the piano to turn it into a completely different sounding instrument.</p>`,
+      incorrectResponse: '<p><img class=imgBank src="images/johnCage.jpg" alt="John Cage at a prepaired piano"></p><p>Sorry, that is not correct! John Cage called for bearings, books, metal, and all manner of every-day items be put into the piano to turn it into a completely different sounding instrument.</p>'
     },
     {
       question: 'Robert Schumann is a well known composer of many works, but it was said his wife was equally as gifted as a composer, and possibly an even better pianist. What is her name?',

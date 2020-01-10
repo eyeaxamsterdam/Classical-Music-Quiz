@@ -18,31 +18,32 @@
 </header>
 
 <main>
-    <section role = "textbox" class="question-card">
-        <form class="forms" action="some-server-endpoint" method ="post">
-            <h2 class="question">Can You "Handel" It?</h2>
-            <img class="handel" src="images/GFHandel.jpg" alt="George F Handel in a powdered wig">
-                <div class="flexans">
-                    <div class="hide">
-                        <input type="button" class="btn test-btns" value="answer 1">
-                        <input type="button" class="btn test-btns" value="answer 2">
-                        <input type="button" class="btn test-btns" value="answer 3">
-                        <input type="button" class="btn test-btns" value="answer 4">
-                    </div>
+    <form action="some-server-endpoint" method ="post">
+        <section role = "textbox" class="question-card">
+        <h2 class="question">Can You "Handel" It?</h2>
+        <img class="handel" src="images/GFHandel.jpg" alt="George F Handel in a powdered wig">
+            <div class="flexans">
+                <div class="hide">
+                    <input type="button" class="btn test-btns" value="answer 1">
+                    <input type="button" class="btn test-btns" value="answer 2">
+                    <input type="button" class="btn test-btns" value="answer 3">
+                    <input type="button" class="btn test-btns" value="answer 4">
                 </div>
-                <input type="button" class="start test-btns" value="Start!">
-                <input type="submit" class="submit test-btns" value="Submit">
-                <input type="button" class="restart test-btns" value="Take it">
-        </form>
-    </section>
+            </div>
+            <input type="button" class="start test-btns" value="Start!">
+            <input type="submit" class="submit test-btns" value="Submit">
+            <input type="button" class="restart test-btns" value="Take it">
+        </section>
 
-    <section class="response">
-        <div class="correct"></div>
-        <div class="wrong"></div>
-        <button class="next test-btns">Next</button>
-        <button class="restart test-btns">Restart</button>
-    </section>
+        <section class="response">
+            <div class="correct"></div>
+            <div class="wrong"></div>
+            <input type="button" class="next test-btns" value="Next">
+            <input type="button" class="restart test-btns" value="Restart">
+        </section>
+    </form>
     <section class="summary">
+        <!-- populated by jquery -->
     </section>
 </main>
 </body>

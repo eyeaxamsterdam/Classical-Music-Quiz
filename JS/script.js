@@ -1,8 +1,8 @@
 'use strict';
 
 /* initialize scores and question number */
-let questionNum = 9;
-let score = 9;
+let questionNum = 0;
+let score = 0;
 let incorrect = 0
 
 
@@ -91,7 +91,8 @@ $('.start').on('click', function(event) {
 
 
 /* brings up the next question */
-$('.next').click(function() {
+$('.next').click(function(e) {
+    e.preventDefault();
     $('section').eq(1).addClass('question-card'); 
     $('section').removeClass('question-card-wrong question-card-correct disabled');
     $('.banner').show();
@@ -132,7 +133,6 @@ $('.question-card').on('click','.btn', e=>{
 /* basically the same as the start event listener */
 
 $('.restart').on('click', function(event) {
-    console.log('click')
     questionNum = 0;
     score = 0;
     incorrect = 0;

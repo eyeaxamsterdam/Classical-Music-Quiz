@@ -109,7 +109,7 @@ const STORE = [
       ],
       correctAnswer: 1,
       correctResponse: 'That\'s correct! Though it\'s called "catgut," it has nothing to do with cats and is made from the fibers of lamb or sheep intestine. Strings these days are made of metals, but there has been a resurgance of these catgut strings in recent decades in an attempt to recreate pre-19th century music in a more historically acurate way.',
-      incorrectResponse: 'Nope! It\'s true that to this day bowed stringed instruments like violin, viola, and cello are played with a bow that uses horse hair, but the strings were at one time made of lamb intestine.'
+      incorrectResponse: 'Nope! It\'s true that to this day bowed stringed instruments like violin, viola, and cello are played with a bow that pulled under tension using horse hair, but the strings were at one time made of lamb intestine.'
     },
     {
       question:
@@ -121,7 +121,7 @@ const STORE = [
         'Dimitri Shostakovich'
       ],
       correctAnswer: 3,
-      correctResponse: '<p><img class="imgBank" src="images/gpds.jpg" alt="A side-by-side comparrison of Harry Potter and Dimitri Shostakovich"></p><p>Yes, that\'s correct! Stalin thought it "might be best for Dimitir Sh. to compose differently next time." Fun fact, it\'s a joke amung musicians that Shostakovich looks similar to Harry Potter.</p>',
+      correctResponse: '<p><img class="imgBank" src="images/gpds.jpg" alt="A side-by-side comparrison of Harry Potter and Dimitri Shostakovich"></p><p>Yes, that\'s correct! Stalin thought it "might be best for D.Sh. to compose differently next time." Fun fact, it\'s a joke amung musicians that Shostakovich looks similar to Harry Potter.</p>',
       incorrectResponse: 'No, it is Shostakovich who was called out by Stalin. He thought it "might be best for D.Sh. to compose differently next time."' 
     }
   ];

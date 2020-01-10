@@ -1,8 +1,8 @@
 'use strict';
 
 /* initialize scores and question number */
-let questionNum = 0;
-let score = 0;
+let questionNum = 9;
+let score = 9;
 let incorrect = 0
 
 
@@ -60,20 +60,20 @@ function finishQuiz() {
     let finalScore=`You got ${score} out of ${STORE.length} correct! `
     if (score <= 3) {
         $('h1').html(finalScore + 'Yikes, that was not good!');
-        $('.summary').html(`<h2>It's okay, you can try again! Click "restart."</h2>`);
+        $('.summary').html(`<div><img class=imgBank src="images/mozartlaughing.gif" alt="WA Mozart laughing"></div><h2>It's okay, you can try again! Click "restart."</h2>`);
     }
     else if (score <= 6) {
         $('h1').html(finalScore);
-        $('.summary').html(`<h2>Not great! Try again though.</h2>`);
+        $('.summary').html(`<div><img class=imgBank src="images/mozartlaughing.gif" alt="WA Mozart laughing"></div><h2>Not great! Try again though.</h2>`);
     }
     else if (score >= 7 && score != 10) {
         $('h1').html(finalScore + 'Hey, you\'re doing alright!');
-        $('.summary').html(`<h2>Try and get a perfect score, now. Go again!</h2>`);
+        $('.summary').html(`<h2>Keep trying and get a perfect score, now. Go again!</h2><div><img class=imgBank src="images/marchingcello.gif" alt="person trying to march and play cello"></div>`);
     
     }
     else {
-        $('h1').html(`Is your name Ash Ketchem? Because you just got them all!`);
-        $('.summary').html(`<h2>I guess you can go and score another perfect run if you want..</h2>`);
+        $('h1').html(`You got them all correct! Go celebrate by listening to Mahler's 2nd Symphony.`);
+        $('.summary').html(`<div><img class=imgBank src="images/mahler.gif" alt="Simon Rattle in absolute extacy conducting Mahler's 2nd symphony"></div><h2>I guess you can click "restart" and score another perfect run if you want...</h2>`);
     }
     $('.summary').show();
     $('.question-card').hide();
@@ -130,6 +130,7 @@ $('.question-card').on('click','.btn', e=>{
 });
 
 /* basically the same as the start event listener */
+
 $('.restart').on('click', function(event) {
     console.log('click')
     questionNum = 0;
